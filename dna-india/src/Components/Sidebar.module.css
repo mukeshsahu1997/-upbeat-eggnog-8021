@@ -1,0 +1,19 @@
+.active {
+    text-decoration: none;
+    color: red;
+    background-color: rgb(255,222,47);
+  }
+  
+  .default {
+    text-decoration: none;
+    color: black;
+   
+  }
+  .active:hover{
+    background-color: rgb(255,222,47);
+  }
+
+  /* .sideComp:hover{
+    background-color: rgb(255,222,47);
+  } */
+  
