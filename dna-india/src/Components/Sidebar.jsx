@@ -1,5 +1,5 @@
 import React from "react";
-// import {Box} from "@chakra-ui/react";
+ import {Box,Flex,Button,Image,He} from "@chakra-ui/react";
 import styles from "./Sidebar.module.css";
 import {NavLink} from "react-router-dom"
 
@@ -22,7 +22,7 @@ const links = [
     { image:"https://english.cdn.zeenews.com/static/public/icons/icons-photos.svg",path: "/photos", title: "Photos" },
     { image:"https://english.cdn.zeenews.com/static/public/icons/icons-cricket.svg",path: "/indaus", title: "Ind Vs Aus" },
     { image:"https://english.cdn.zeenews.com/static/public/icons/icons-videos.svg",path: "/video", title: "Videos" },
-    { image:"https://english.cdn.zeenews.com/static/public/icons/icons-explainer.svg",path: "/explainer", title: "Explainers" },
+    { image:"https://english.cdn.zeenews.com/static/public/icons/icons-explainer.svg",path: "/explainers", title: "Explainers" },
      { image:"https://english.cdn.zeenews.com/static/public/icons/icons-india.svg",path:"/india", title: "India" },
      { image:"https://english.cdn.zeenews.com/static/public/icons/icons-entertainment.svg",path: "/entertainment", title: "Entertainment" },
      { image:"https://english.cdn.zeenews.com/static/public/icons/icons-sports.svg",path: "/sports", title: "Sports" },
@@ -39,20 +39,16 @@ function Sidebar(){
     return(
         <div
         style={{
-           
+        position:"sticky",
+        
         backgroundColor:"#f5f5f5",    
         textAlign:"left",
-       
-       
-        
         width: "25%",
-      
-      
-      
       }}
     >
         
         {links.map((link) => (
+            
         <NavLink
           // style={({ isActive }) => {
           //   return isActive ? activeStyle : defaultStyle;
@@ -64,13 +60,17 @@ function Sidebar(){
           to={link.path}
           end
         >
-            <div style={{padding:"10px", display:"flex",justifyContent:"center", alignItems:"left"}}>
            
-            <img style={{alignItems:"left",marginRight:"10px"}}  src={link.image} alt= {link.title}    /> {link.title}  
-          
-            </div>
-        
-           
+     
+     <Image src={link.image}></Image> {link.title}
+
+    
+      
+
+      
+      
+       
+      
            
           
         </NavLink>
