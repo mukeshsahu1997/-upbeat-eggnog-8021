@@ -5,7 +5,8 @@ function Topnews(){
     return(
         <Box bg="rgb(49,49,49)" p="2" align="left" marginTop="10px">
             <Button bg="rgb(170,170,170)" >Top News</Button>
-            
+            <Box></Box>
+
         </Box>
     )
 }
