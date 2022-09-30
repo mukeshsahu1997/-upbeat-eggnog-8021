@@ -1,0 +1,10 @@
+.showMore{
+    width: 100%;
+    border: 2px solid black;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.showMore:hover{
+    color: rgb(255,222,47);
+}

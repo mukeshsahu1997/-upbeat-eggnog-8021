@@ -1,0 +1,31 @@
+
+.rb{
+   width:100%;
+   padding:10px;
+   border-radius:10px;
+   margin-top:5px
+}
+
+.rb:hover{
+   color: blueviolet;
+}
+.hr{
+   margin-top: 10px;
+   margin-bottom: 10px;
+  border: 1px solid rgb(255,222,47);
+}
+.more{
+   font-size: 15px;
+   font-weight: 600;
+}
+.more:hover{
+   cursor: pointer;
+   color: blueviolet;
+}
+.h2{
+   font-size: 14px;
+   text-align:start;
+   margin-left: 5px;
+   font-weight: bold;
+
+}

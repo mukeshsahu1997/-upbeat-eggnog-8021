@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-// 1.
+
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { Heading } from "@chakra-ui/react";
+import "./latestNews.css"
 
 const getData = (url) => {
   return fetch(url).then((res) => res.json());
@@ -10,8 +11,13 @@ const getData = (url) => {
 
 const LatestNews = () => {
   const [data, setData] = useState([]);
+  const [visible,setVisible]=useState(10)
 
+const showMore=()=>{
+    setVisible((prevValue)=>prevValue+10
 
+    )
+}
   useEffect(() => {
     getData(`https://newsapi.org/v2/everything?q=apple&from=2022-09-28&to=2022-09-28&sortBy=popularity&apiKey=bb8089aa73d54c63956f570f4d2c380e`).then((res) => {
       setData(res.articles);
@@ -27,11 +33,11 @@ const LatestNews = () => {
     <>
 
     
-    
+   
 
       <div style={{width:"50%" ,padding:"10px", backgroundColor:"#f5f5f5",}}>
            
-        {data?.map((news) => (
+        {data.slice(0,visible).map((news) => (
            
           <div
             key={news.source.id}
@@ -51,6 +57,8 @@ const LatestNews = () => {
          
           </div>
         ))}
+
+        <button className="showMore" onClick={showMore}>More News</button>
       </div>
      
     </>
