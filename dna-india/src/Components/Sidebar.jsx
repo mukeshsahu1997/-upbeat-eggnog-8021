@@ -40,7 +40,7 @@ function Sidebar(){
         <div
         style={{
         position:"sticky",
-        
+        fontFamily:" Roboto Slab",
         backgroundColor:"#f5f5f5",    
         textAlign:"left",
         width: "25%",
