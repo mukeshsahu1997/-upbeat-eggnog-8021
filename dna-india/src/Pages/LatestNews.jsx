@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
+import{Link} from "react-router-dom"
 
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
-import { Heading } from "@chakra-ui/react";
 import "./latestNews.css"
 
 const getData = (url) => {
@@ -19,8 +18,8 @@ const showMore=()=>{
     )
 }
   useEffect(() => {
-    getData(`https://newsapi.org/v2/everything?q=apple&from=2022-09-28&to=2022-09-28&sortBy=popularity&apiKey=bb8089aa73d54c63956f570f4d2c380e`).then((res) => {
-      setData(res.articles);
+    getData(`https://floating-woodland-86359.herokuapp.com/api/articles`).then((res) => {
+      setData(res);
       console.log(res)
     });
   
@@ -40,7 +39,7 @@ const showMore=()=>{
         {data.slice(0,visible).map((news) => (
            
           <div
-            key={news.source.id}
+            key={news.title}
             style={{
               display: "flex",
               backgroundColor:"white",
@@ -53,7 +52,8 @@ const showMore=()=>{
           >
             
             <img style={{width:"150px",height:"100px"}} src={news.urlToImage} alt="news-pic" />
-            <p> {news.title}</p>
+            {/* <p> {news.title}</p> */}
+            <a href={news.url}>{news.title}</a>
          
           </div>
         ))}

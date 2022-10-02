@@ -29,7 +29,7 @@ function Allroutes(){
         <Route path="/education" element={<Education/>}></Route>
         <Route path="/business" element={<Business/>}></Route>
         <Route path="/world" element={<World/>}></Route>
-        
+       
 
         
 
